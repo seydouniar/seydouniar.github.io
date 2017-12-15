@@ -23,7 +23,10 @@ body,html {
 	padding: 5px;
 	margin: 5px;	
 }
-
+.font-italic{
+  font-family: "Georgia";
+  font-style: oblique;
+}
 #liste_id{
 	margin-left: 10px;
 	position: relative;
