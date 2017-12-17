@@ -25,7 +25,8 @@
         var temp = document.getElementById("date").value
         var t = temp.split("-");
         var date = t[0]+"-"+t[1];
-        crimeArray(lat,lng,date);     
+        crimeArray(lat,lng,date);   
+        
    };
 
    function reload_page(){

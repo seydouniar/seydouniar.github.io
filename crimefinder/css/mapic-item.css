@@ -31,9 +31,16 @@ body,html {
 	margin-left: 10px;
 	position: relative;
   	overflow:auto;
-    height:280px;
+    height:45%;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
 #map { 
 	position:relative; 
 	top:0; 

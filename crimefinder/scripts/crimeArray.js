@@ -3,9 +3,9 @@
 //        : date : la date du crime en format YYYY-MM (2017-01)
 // var : categories : tableau contenant toutes les catégories de crime
 //     : crimeArray : tableau contenant les effectifs
-
+var data = [];
 function crimeArray(lat, lng, date){
-
+    
     // récupère les différentes catégories pour une date donnée
 
     fetch('https://data.police.uk/api/crime-categories?date='+date).then(
@@ -45,6 +45,7 @@ function crimeArray(lat, lng, date){
                     crimeArray.push([categories[c][1],count,donnees]);
                     
                 }
+                data=crimeArray;
                 for (var i = 0; i < crimeArray.length; i++) {
                     var contenue = crimeArray[i][2];                    
                     tmp+='<h5 class="panel-title">';
@@ -60,9 +61,17 @@ function crimeArray(lat, lng, date){
                         //console.log(contenue[j].location_type,contenue[j].context,
                         //contenue[j].outcome_status);
                         console.log(contenue[j]);
-                        tmp2+='<li class="list-group-item"> Street : '
-                        +contenue[j].location.street.name+'<br />Location type : '+
-                        contenue[j].location_type+'</li>';
+                        if(contenue[j].outcome_status!=null){
+                            tmp2+='<li class="list-group-item"> Street : '
+                            +contenue[j].location.street.name+'<br />Location type : '+
+                            contenue[j].location_type+'<br /> Outcome status: '+
+                            contenue[j].outcome_status.category+'</li>';
+                            }else{
+                                tmp2+='<li class="list-group-item"> Street : '
+                                +contenue[j].location.street.name+'<br />Location type : '+
+                                contenue[j].location_type+'<br /> Outcome status: '+
+                                'Not defined</li>';
+                            }
                         }
                     
                     tmp2+='</ul></div>';
