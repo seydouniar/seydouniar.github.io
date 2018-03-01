@@ -22,7 +22,7 @@
       appId      : '{1273440962800730}',
       cookie     : true,
       xfbml      : true,
-      version    : '{v2.7}'
+      version    : '{v2.8}'
     });
       
     FB.AppEvents.logPageView();   
@@ -52,10 +52,6 @@
 	      <li class="active"><a href="#">Home</a></li>
 	    </ul>
 	  </div>
-		<fb:login-button 
-                            scope="public_profile,email"
-                            onlogin="checkLoginState();">
-                        </fb:login-button>
 	</nav>
 
 	<div class="container">
@@ -82,6 +78,11 @@
 			<p class="text-center">seydouniar@gmail.com</p>
 			<h3>Portable</h3>
 			<p class="text-center">0752825307</p>
+
+			<fb:login-button 
+				cope="public_profile,email"
+				onlogin="checkLoginState();"> login
+			</fb:login-button>
 			<br><br>
 			
 		</div>
