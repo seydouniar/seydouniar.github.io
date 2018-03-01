@@ -26,9 +26,9 @@
 			});
 			FB.getLoginStatus(function(response){
 				if(response.status == 'connected'){
-					getElementById('status').innerHTML = "hello"
+					document.getElementById('status').innerHTML = "hello"
 				}else if(response.status =='not_autorized'){
-					getElementById('status').innerHTML = "non autorizer"
+					document.getElementById('status').innerHTML = "non autorizer"
 				}
 			});
 		};
