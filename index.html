@@ -24,6 +24,13 @@
 				xfbml            : true,
 				version          : 'v2.12'
 			});
+			FB.getLoginStatus(function(response){
+				if(response.status == 'connected'){
+					getElementById('status').innerHTML = "hello"
+				}else if(response.status =='not_autorized'){
+					getElementById('status').innerHTML = "non autorizer"
+				}
+			});
 		};
 	
 		(function(d, s, id){
@@ -76,7 +83,7 @@
 				onlogin="checkLoginState();"> login
 			</fb:login-button>
 			<br><br>
-			
+		<div id = 'status'></div>
 		</div>
 		<div class="col-sm-6">
 			<h1 class="text-primary">Mes collègues</h1>
