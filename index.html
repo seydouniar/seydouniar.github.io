@@ -16,6 +16,33 @@
 </head>
 
 <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{1273440962800730}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{v2.7}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ 
+  function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+</script>
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -25,6 +52,10 @@
 	      <li class="active"><a href="#">Home</a></li>
 	    </ul>
 	  </div>
+		<fb:login-button 
+                            scope="public_profile,email"
+                            onlogin="checkLoginState();">
+                        </fb:login-button>
 	</nav>
 
 	<div class="container">
@@ -52,6 +83,7 @@
 			<h3>Portable</h3>
 			<p class="text-center">0752825307</p>
 			<br><br>
+			
 		</div>
 		<div class="col-sm-6">
 			<h1 class="text-primary">Mes collègues</h1>
