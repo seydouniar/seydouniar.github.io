@@ -5,44 +5,33 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>NIARE Seydou</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">
+		.info{
+			padding-left: 0cm
+		}
+
+    
 		.profile-image {
 			    padding-top: 10px;
 			    padding-bottom: 10px;
 			    width: 100%;
 			    height: 100%;
 			}
+			.modal-header, .close {
+      background-color: #37469b;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  	}
+		.modal-footer {
+				background-color: #f9f9f9;
+		}
 	</style>
 </head>
 
 <body>
-	<script>
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId            : '1234485940017070',
-				autoLogAppEvents : true,
-				xfbml            : true,
-				version          : 'v2.12'
-			});
-			FB.getLoginStatus(function(response){
-				if(response.status == 'connected'){
-					document.getElementById('status').innerHTML = "hello"
-				}else if(response.status =='not_autorized'){
-					document.getElementById('status').innerHTML = "non autorizer"
-				}else{
-					document.getElementById('status').innerHTML = "not in face"
-				}
-			});
-		};
-	
-		(function(d, s, id){
-			 var js, fjs = d.getElementsByTagName(s)[0];
-			 if (d.getElementById(id)) {return;}
-			 js = d.createElement(s); js.id = id;
-			 js.src = "https://connect.facebook.net/en_US/sdk.js";
-			 fjs.parentNode.insertBefore(js, fjs);
-		 }(document, 'script', 'facebook-jssdk'));
-	</script>
 			
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
@@ -50,74 +39,85 @@
 	      <a class="navbar-brand" href="#">NIARE Seydou</a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#">Home</a></li>
-	    </ul>
+				<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+				<li><a data-toggle="tab" href="#projets">Mes Projets</a></li>
+				<li><a data-toggle="tab" href="#etudes">Mes Etudes</a></li>
+				<li><a data-toggle="tab" href="#hobbies">Mes Hobbies</a></li>
+				<li><a data-toggle="tab" href="#blog">Blog</a></li>
+				<li><a data-toggle="tab" href="#about">A propos</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a data-toggle="modal" href="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+
 	  </div>
 	</nav>
 
-	<div class="container">
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="row">
-				<div class="col-sm-3">
-					<img class="profile-image img-thumbnail" src="https://s8.postimg.org/dk68eri45/Pesso.png">
-				</div>
-				<div class="col-sm-3">
-					<h4>Nom</h4>
-					<p class="text-center">NIARE</p>
-					<h4>Prénom</h4>
-					<p class="text-center">Seydou</p>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="home"></div>
+		<div class="tab-pane fade" id ="projets"></div>
+		<div class="tab-pane fade" id ="etudes"></div>
+		<div class="tab-pane fade" id ="hobbies"></div>
+		<div class="tab-pane fade" id ="blog"></div>
+		<div class="tab-pane fade" id = "about"></div>
+	</div>
+
+	<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+			
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header" style="padding:35px 50px;">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+					</div>
+					<div class="modal-body" style="padding:40px 50px;">
+						<form role="form">
+							<div class="form-group">
+								<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+								<input type="text" class="form-control" id="usrname" placeholder="Enter your username">
+							</div>
+							<div class="form-group">
+								<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+								<input type="password" class="form-control" id="psw" placeholder="Enter password">
+							</div>
+							<div>
+								<fb:login-button 
+									cope="public_profile,email"
+									onlogin="checkLoginState();"> Login with facebook
+								</fb:login-button>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" checked>Remember me</label>
+							</div>
+					
+								<button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+						<p>Not a member? <a href="#">Sign Up</a></p>
+						<p>Forgot <a href="#">Password?</a></p>
+					</div>
 				</div>
 				
 			</div>
-			<h1 class="text-primary">Information personnel</h1>
-			<h3>Date de naissance</h3>
-			<p class="text-center">24/09/1989</p>
-			<h3>Adresse</h3>
-			<p class="text-center">Bamako, Mali</p>
-			<h3>Email</h3>
-			<p class="text-center">seydouniar@gmail.com</p>
-			<h3>Portable</h3>
-			<p class="text-center">0752825307</p>
-
-			<fb:login-button 
-				cope="public_profile,email"
-				onlogin="checkLoginState();"> login
-			</fb:login-button>
-			<br><br>
-		<div id = 'status'></div>
-		</div>
-		<div class="col-sm-6">
-			<h1 class="text-primary">Mes collègues</h1>
-			<table class="table table-striped">
-			    <thead>
-			      <tr>
-			        <th>Nom</th>
-			        <th>Prenom</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-			      <tr>
-			        <td>Samreth</td>
-			        <td>Darren</td>
-			      </tr>
-			      <tr>
-			        <td>Cherel</td>
-			        <td>Julien</td>
-			      </tr>
-			      <tr>
-			        <td>Elazri</td>
-			        <td>Yassine</td>
-			      </tr>
-			      <tr>
-			        <td>Roudmane</td>
-			        <td>Idriss</td>
-			      </tr>
-			    </tbody>
-			  </table>
-		</div>
+		</div> 
 	</div>
-	</div>
+	 
+	<script>
+	$(document).ready(function(){
+			$("#myBtn").click(function(){
+					$("#myModal").modal();
+			});
+	});
+	</script>
+	<script src = "scriptjs/profil.js">getProfil()</script>
+	<script src = "scriptjs/login.js">getProfil()</script>
+	
 </body>
 
 </html>
