@@ -13,7 +13,7 @@ var data  = {nom:'NIARÉ',
     '<div class="container">'+
         '<div class="row "> <div class="col-sm-5 sidenav info"><h1 class = "text-primary">Information personnel</h1>'+
             '<div class="row"><div class="col-sm-3">'
-               +' <img class="profile-image img-thumbnail img-circle" src="https://s18.postimg.org/ceoqz5sgp/1454697_1452705681423953_7155546759707234975_n.jpg">'+
+               +' <img class="profile-image img-thumbnail img-circle" src="data/user_default.png">'+
             '</div>'+
 
             '<div class="col-sm-4 text-justify"><h4 class = "text-primary">Nom: </h4>'+

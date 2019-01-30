@@ -1,0 +1,133 @@
+    .info{
+        padding-left: 0cm;
+    }
+    .header {
+        background-color: #f1f1f1;
+        text-align: center;
+        }
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        }
+    .sticky2{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 52px;
+        width: 100%;
+    }
+    .header {
+        padding: 10px 16px;
+        background: #555;
+        color: #f1f1f1;
+        }
+    body{
+        align-self: auto;
+        background: #ecedf0;
+    }
+    #cvpdf{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .card-header{
+        background: #f1f1f1;
+        text-shadow: 2px 2px;
+    }
+    .card{
+        padding: 20px;
+        margin: auto;
+    
+            }
+    .card-body img{
+        margin: 2px;
+    }
+    .card-footer a{
+        float: right;
+    }
+    iframe{
+        margin-right: 5px;  
+    }
+    #desc{
+        padding-top: 2cm;
+        font-family: verdana;
+        font-size: 18px;
+    }
+.blog_header{
+    position: sticky;
+}
+
+
+.profile-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.modal-header, .close {
+    background-color: #37469b;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+}
+.modal-footer {
+        background-color: #f9f9f9;
+}
+.modal-content{
+    width: 70%;
+    position: absolute;
+    
+    right: 100px;
+    
+}
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(39, 72, 77);
+    color: white;
+    text-align: center;
+}
+.section {
+    display: block;
+    height: 500px;
+    font-size: 24pt;
+    color: brown;
+    margin: auto;
+    top: 50px;
+    }
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+        display:inline-block;
+        position: sticky; 
+        background-color: #f1f1f1;
+        height: 100%;
+        z-index: 1;
+        top: 80px;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 20px;
+    }
+    #setting_form{
+        margin: auto;
+        background-color: #555;
+        padding: 30px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 0px;}
+        .sidenav a {font-size: 18px;}
+      }
