@@ -10,13 +10,13 @@ var data  = {nom:'NIARÉ',
              }
 
     var profil=
-    '<div class="container">'+
-        '<div class="row "> <div class="col-sm-5 sidenav info"><h1 class = "text-primary">Information personnel</h1>'+
+    '<div class="container-fluid">'+
+        '<div class="row "> <div class="col-xs-5 sidenav info"><h1 class = "text-primary">Information personnel</h1>'+
             '<div class="row"><div class="col-sm-3">'
                +' <img class="profile-image img-thumbnail img-circle" src="data/user_default.png">'+
             '</div>'+
 
-            '<div class="col-sm-4 text-justify"><h4 class = "text-primary">Nom: </h4>'+
+            '<div class="col-sm-3 text-justify"><h4 class = "text-primary">Nom: </h4>'+
                 '<p class="text-center">'+data.nom+'</p><h4 class = "text-primary">Prénom:</h4>'+
                 '<p class="text-center">'+data.prenom+'</p><h4 class = "text-primary">e-mail:</h4>'+
 
@@ -24,7 +24,7 @@ var data  = {nom:'NIARÉ',
                 '<p class="text-center">'+data.telephone+'</p><h4 class = "text-primary">Adresse:</h4>'+
                 '<p class="text-center">'+data.adresse.voie+'</p><p class="text-center">'+data.adresse.code+' '+
                 data.adresse.ville+','+data.adresse.pays+'</p></div></div></div>'+
-                '<div class = "col-sm-6 text-justify" id="desc">'+
+                '<div class = "col-xs-6 text-justify" id="desc">'+
                 '<h3 class = "text-primary">À propos de moi</h3>'+
                 '<p>Etudant en master <a target="_blank" href="http://www.univ-montp3.fr/miap/ens/miashs/master/index.html">MIASHS</a>'+
                 ' de <a href="http://www.univ-montp3.fr/miap/ens/miashs/master/index.html">l\'université Paùl Valery de Montpellier</a>'+
@@ -41,7 +41,7 @@ var data  = {nom:'NIARÉ',
                 '(<a href="https://www.univ-grenoble-alpes.fr" target="_blank">Université Grenoble Alpes</a>) de Grenoble à'+
                 '<a href="https://im2ag.univ-grenoble-alpes.fr" target="_blank"> L\'IM2AG</a>.</p>'+
                 '<p>'+data.desc+'</p>'
-                '</div></div></div>'
+                '</div></div>'
                 ;
 
         
