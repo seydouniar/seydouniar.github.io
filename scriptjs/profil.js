@@ -26,8 +26,8 @@ var data  = {nom:'NIARÉ',
                 data.adresse.ville+','+data.adresse.pays+'</p></div></div></div>'+
                 '<div class = "col-xs-6 text-justify" id="desc">'+
                 '<h3 class = "text-primary">À propos de moi</h3>'+
-                '<p>Etudant en master <a target="_blank" href="http://www.univ-montp3.fr/miap/ens/miashs/master/index.html">MIASHS</a>'+
-                ' de <a href="http://www.univ-montp3.fr/miap/ens/miashs/master/index.html">l\'université Paùl Valery de Montpellier</a>'+
+                '<p>Etudiant en master <a target="_blank" href="http://www.univ-montp3.fr/miap/ens/miashs/master/index.html">MIASHS</a>'+
+                ' de <a href="http://www.univ-montp3.fr/miap/ens/miashs/master/index.html">l\'université Paul Valery de Montpellier</a>'+
                 ', né à Bamako (Mali) le 24 Septembre 1989, j\'ai commencé mes études primaires l\'école de Korofina Nord'+
                 '(Groupe Scolaire Bahaben Santara) à l\'age de 8 ans, après avoir eu le DEF (Diplôme d\'etude fondamentale), j\'ai fait'+
                 ' le Lycée Bouillagui Fadiga de Bamako entre 2006 et 2009, obtenu le Baccalaureat Malien en 2009, j\'ai eu'+
